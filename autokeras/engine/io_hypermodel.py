@@ -1,4 +1,4 @@
-class IOHyperModel(object):
+class IOHyperModel:
     """A mixin class connecting the input nodes and heads with the adapters.
 
     This class is extended by the input nodes and the heads. The AutoModel calls the

@@ -27,7 +27,7 @@ def get_tuner_class(tuner):
                          '"bayesian".'.format(tuner=tuner))
 
 
-class AutoModel(object):
+class AutoModel:
     """ A Model defined by inputs and outputs.
     AutoModel combines a HyperModel and a Tuner to tune the HyperModel.
     The user can use it in a similar way to a Keras model since it

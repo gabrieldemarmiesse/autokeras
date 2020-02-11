@@ -183,7 +183,7 @@ class Graph(kerastuner.HyperModel, serializable.Serializable):
         for block in self.blocks:
             if block.name == name:
                 return block
-        raise ValueError('Cannot find block named {name}.'.format(name=name))
+        raise ValueError(f'Cannot find block named {name}.')
 
     def get_config(self):
         blocks = [serialize(block) for block in self.blocks]

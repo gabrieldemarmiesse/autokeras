@@ -1,4 +1,4 @@
-class Serializable(object):
+class Serializable:
     """Serializable from and to JSON with same mechanism as Keras Layer."""
 
     def get_config(self):

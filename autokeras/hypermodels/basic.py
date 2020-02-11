@@ -61,7 +61,7 @@ class DenseBlock(block_module.Block):
 
         for i in range(num_layers):
             units = hp.Choice(
-                'units_{i}'.format(i=i),
+                f'units_{i}',
                 [16, 32, 64, 128, 256, 512, 1024],
                 default=32)
             output_node = layers.Dense(units)(output_node)
@@ -215,14 +215,14 @@ class ConvBlock(block_module.Block):
 
         for i in range(num_blocks):
             output_node = conv(
-                hp.Choice('filters_{i}_1'.format(i=i),
+                hp.Choice(f'filters_{i}_1',
                           [16, 32, 64],
                           default=32),
                 kernel_size,
                 padding=self._get_padding(kernel_size, output_node),
                 activation='relu')(output_node)
             output_node = conv(
-                hp.Choice('filters_{i}_2'.format(i=i),
+                hp.Choice(f'filters_{i}_2',
                           [16, 32, 64],
                           default=32),
                 kernel_size,
